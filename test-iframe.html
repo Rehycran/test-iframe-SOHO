@@ -1,0 +1,214 @@
+
+<div class="slider">
+
+  <!-- radios -->
+  <input type="radio" name="slide" id="s1" checked>
+  <input type="radio" name="slide" id="s2">
+  <input type="radio" name="slide" id="s3">
+  <input type="radio" name="slide" id="s4">
+  <input type="radio" name="slide" id="s5">
+  <input type="radio" name="slide" id="s6">
+  <input type="radio" name="slide" id="s7">
+  <input type="radio" name="slide" id="s8">
+  <input type="radio" name="slide" id="s9">
+  <input type="radio" name="slide" id="s10">
+  <input type="radio" name="slide" id="s11">
+
+  <!-- images -->
+  <div class="slides">
+    <img src="/extractdonnees-1.png" class="img1">
+    <img src="/extractdonnees-1-1.png" class="img2">
+    <img src="/extractdonnees-2.png" class="img3">
+    <img src="/extractdonnees-3.png" class="img4">
+    <img src="/extractdonnees-4.png" class="img5">
+    <img src="/extractdonnees-4-1.png" class="img6">
+    <img src="/extractdonnees-5.png" class="img7">
+    <img src="/extractdonnees-6.png" class="img8">
+    <img src="/extractdonnees-6-1.png" class="img9">
+    <img src="/extractdonnees-6-2.png" class="img10">
+    <img src="/extractdonnees-8.png" class="img11">
+  </div>
+
+  <!-- boutons -->
+  <div class="nav">
+    <label for="s1">●</label>
+    <label for="s2">●</label>
+    <label for="s3">●</label>
+    <label for="s4">●</label>
+    <label for="s5">●</label>
+    <label for="s6">●</label>
+    <label for="s7">●</label>
+    <label for="s8">●</label>
+    <label for="s9">●</label>    
+    <label for="s10">●</label>
+    <label for="s11">●</label>
+  </div>
+
+  <!-- flèches -->
+  <div class="arrows">
+    <label for="s11" class="prev s1">⬅️</label>
+    <label for="s2" class="next s1">➡️</label>
+    <label for="s1" class="prev s2">⬅️</label>
+    <label for="s3" class="next s2">➡️</label>
+    <label for="s2" class="prev s3">⬅️</label>
+    <label for="s4" class="next s3">➡️</label>
+    <label for="s3" class="prev s4">⬅️</label>
+    <label for="s5" class="next s4">➡️</label>
+    <label for="s4" class="prev s5">⬅️</label>
+    <label for="s6" class="next s5">➡️</label>
+    <label for="s5" class="prev s6">⬅️</label>
+    <label for="s7" class="next s6">➡️</label>
+    <label for="s6" class="prev s7">⬅️</label>
+    <label for="s8" class="next s7">➡️</label>
+    <label for="s7" class="prev s8">⬅️</label>
+    <label for="s9" class="next s8">➡️</label>
+    <label for="s8" class="prev s9">⬅️</label>
+    <label for="s10" class="next s9">➡️</label>
+    <label for="s9" class="prev s10">⬅️</label>
+    <label for="s11" class="next s10">➡️</label>
+    <label for="s10" class="prev s11">⬅️</label>
+    <label for="s1" class="next s11">➡️</label>
+  </div>
+
+  <!-- légendes -->
+  <div class="caption">
+    <span class="c1">5.</span>
+    <span class="c2">6.</span>
+    <span class="c3">7.</span>
+    <span class="c4">8.</span>
+    <span class="c5">9.</span>
+    <span class="c6">10</span>
+    <span class="c7">11</span>
+    <span class="c8">12.</span>
+    <span class="c9">12.</span>
+    <span class="c10">12.</span>
+    <span class="c11">12.</span>
+  </div>
+
+</div>
+  
+<style>
+.slider {
+  width: 600px;
+  position: relative;
+  margin-left: 0;
+}
+
+/* cacher radios */
+input {
+  display: none;
+}
+
+.slides {
+  position: relative;
+  margin-left: 50px;
+}
+
+.slides img {
+  width: 90%;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* afficher image active */
+#s1:checked ~ .slides .img1,
+#s2:checked ~ .slides .img2,
+#s3:checked ~ .slides .img3,
+#s4:checked ~ .slides .img4,
+#s5:checked ~ .slides .img5,
+#s6:checked ~ .slides .img6,
+#s7:checked ~ .slides .img7,
+#s8:checked ~ .slides .img8,
+#s9:checked ~ .slides .img9,
+#s10:checked ~ .slides .img10,
+#s11:checked ~ .slides .img11 {
+  opacity: 1;
+  position: relative;
+}
+
+/* cacher toutes les légendes */
+.caption span {
+  display: none;
+}
+
+/* afficher la bonne selon le slide actif */
+#s1:checked ~ .caption .c1,
+#s2:checked ~ .caption .c2,
+#s3:checked ~ .caption .c3,
+#s4:checked ~ .caption .c4,
+#s5:checked ~ .caption .c5,
+#s6:checked ~ .caption .c6,
+#s7:checked ~ .caption .c7,
+#s8:checked ~ .caption .c8,
+#s9:checked ~ .caption .c9,
+#s10:checked ~ .caption .c10,
+#s11:checked ~ .caption .c11 {
+  display: block;
+}
+  
+/* points */
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav label {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
+  color: #bbb;
+}
+
+#s1:checked ~ .nav label[for="s1"],
+#s2:checked ~ .nav label[for="s2"],
+#s3:checked ~ .nav label[for="s3"],
+#s4:checked ~ .nav label[for="s4"],
+#s5:checked ~ .nav label[for="s5"],
+#s6:checked ~ .nav label[for="s6"],
+#s7:checked ~ .nav label[for="s7"],
+#s8:checked ~ .nav label[for="s8"],
+#s9:checked ~ .nav label[for="s9"],
+#s10:checked ~ .nav label[for="s10"],
+#s11:checked ~ .nav label[for="s11"] {
+  color: #333;
+}
+
+/* flèches */
+.arrows label {
+  position: absolute;
+  top: 45%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* afficher bonnes flèches */
+#s1:checked ~ .arrows .s1,
+#s2:checked ~ .arrows .s2,
+#s3:checked ~ .arrows .s3,
+#s4:checked ~ .arrows .s4,
+#s5:checked ~ .arrows .s5,
+#s6:checked ~ .arrows .s6,
+#s7:checked ~ .arrows .s7,
+#s8:checked ~ .arrows .s8,
+#s9:checked ~ .arrows .s9,
+#s10:checked ~ .arrows .s10,
+#s11:checked ~ .arrows .s11 {
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+  
+.prev { left: 10px; }
+.next { right: 10px; }
+</style>
